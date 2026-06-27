@@ -1,0 +1,176 @@
+Type,Name,Stereotype,Notes,CSV_KEY,CSV_PARENT_KEY
+Package,SmartCity-Model,,Root package for Smart City Emergency Command System DoDAF Architecture,PKG_ROOT,
+Package,AV-1-Overview,,DoDAF AV-1 Overview and Summary Information,PKG_AV1,PKG_ROOT
+Package,AV-2-Dictionary,,DoDAF AV-2 Integrated Dictionary,PKG_AV2,PKG_ROOT
+Package,OV-1-Concept,,DoDAF OV-1 High-Level Operational Concept Graphic,PKG_OV1,PKG_ROOT
+Package,OV-2-Flow,,DoDAF OV-2 Operational Resource Flow Description,PKG_OV2,PKG_ROOT
+Package,OV-4-Org,,DoDAF OV-4 Organizational Relationships Chart,PKG_OV4,PKG_ROOT
+Package,OV-5-Activity,,DoDAF OV-5 Operational Activity Model,PKG_OV5,PKG_ROOT
+Package,SV-1-Interface,,DoDAF SV-1 Systems Interface Description,PKG_SV1,PKG_ROOT
+Package,SV-4-Function,,DoDAF SV-4 Systems Functionality Description,PKG_SV4,PKG_ROOT
+Package,AV1-SituationAwareness,,Situation Awareness Domain,PKG_AV1_SA,PKG_AV1
+Package,AV1-IncidentTriage,,Incident Triage Domain,PKG_AV1_IT,PKG_AV1
+Package,AV1-ResourceDispatch,,Resource Dispatch Domain,PKG_AV1_RD,PKG_AV1
+Package,AV1-CommandControl,,Command & Control Domain,PKG_AV1_CC,PKG_AV1
+Package,AV1-Communication,,Communication Domain,PKG_AV1_COM,PKG_AV1
+Package,AV1-PostIncident,,Post-Incident Analysis Domain,PKG_AV1_PI,PKG_AV1
+Class,IoT Sensor Network,block,Urban environmental sensors for fire/smoke/flood detection,ELM_AV1_001,PKG_AV1_SA
+Class,Surveillance Camera Grid,block,City-wide CCTV network with AI-based anomaly detection,ELM_AV1_002,PKG_AV1_SA
+Class,Public Reporting App,block,Mobile application for citizen incident reporting,ELM_AV1_003,PKG_AV1_SA
+Class,Incident Classifier,block,AI-driven incident type classification engine,ELM_AV1_004,PKG_AV1_IT
+Class,Priority Assessment Module,block,Automated severity and urgency scoring system,ELM_AV1_005,PKG_AV1_IT
+Class,Police Dispatch System,block,Police unit allocation and routing platform,ELM_AV1_006,PKG_AV1_RD
+Class,Fire Response System,block,Fire station alert and equipment dispatch,ELM_AV1_007,PKG_AV1_RD
+Class,EMS Dispatch System,block,Ambulance and medical resource coordination,ELM_AV1_008,PKG_AV1_RD
+Class,Municipal Service Dispatch,block,Public works and utility emergency response,ELM_AV1_009,PKG_AV1_RD
+Class,Field Command Post,block,Mobile on-scene coordination unit,ELM_AV1_010,PKG_AV1_CC
+Class,District Command Center,block,Regional coordination and resource aggregation node,ELM_AV1_011,PKG_AV1_CC
+Class,City EOC,block,City Emergency Operations Center for strategic command,ELM_AV1_012,PKG_AV1_CC
+Class,TETRA Radio Network,block,Digital trunked radio for first responder voice,ELM_AV1_013,PKG_AV1_COM
+Class,LTE Broadband Network,block,4G/5G data network for video and data transmission,ELM_AV1_014,PKG_AV1_COM
+Class,Satellite Communication Terminal,block,Backup comms via satellite for disaster scenarios,ELM_AV1_015,PKG_AV1_COM
+Class,Data Collection Module,block,Post-incident evidence and log aggregation,ELM_AV1_016,PKG_AV1_PI
+Class,Timeline Reconstructor,block,Automatic incident timeline generation engine,ELM_AV1_017,PKG_AV1_PI
+Class,After-Action Report Generator,block,Automated incident report and lessons-learned compilation,ELM_AV1_018,PKG_AV1_PI
+Package,AV2-SituationAwareness,,Situation Awareness Dictionary,PKG_AV2_SA,PKG_AV2
+Package,AV2-IncidentTriage,,Incident Triage Dictionary,PKG_AV2_IT,PKG_AV2
+Package,AV2-ResourceDispatch,,Resource Dispatch Dictionary,PKG_AV2_RD,PKG_AV2
+Package,AV2-CommandControl,,Command & Control Dictionary,PKG_AV2_CC,PKG_AV2
+Package,AV2-Communication,,Communication Dictionary,PKG_AV2_COM,PKG_AV2
+Package,AV2-PostIncident,,Post-Incident Analysis Dictionary,PKG_AV2_PI,PKG_AV2
+Class,SensorNode,block,Physical sensor device ID location type status polling interval,ELM_AV2_001,PKG_AV2_SA
+Class,CameraUnit,block,Camera ID resolution PTZ capability coverage area stream URL,ELM_AV2_002,PKG_AV2_SA
+Class,CitizenReport,block,Report ID timestamp location category priority description attachments,ELM_AV2_003,PKG_AV2_SA
+Class,IncidentRecord,block,Incident ID type category severity status timestamps location,ELM_AV2_004,PKG_AV2_IT
+Class,PriorityRule,block,Rule ID condition expression priority level escalation threshold,ELM_AV2_005,PKG_AV2_IT
+Class,PoliceUnit,block,Unit ID type status location capacity personnel count,ELM_AV2_006,PKG_AV2_RD
+Class,FireTruck,block,Vehicle ID station type capacity equipment list status,ELM_AV2_007,PKG_AV2_RD
+Class,Ambulance,block,Vehicle ID hospital affiliation capability level status crew,ELM_AV2_008,PKG_AV2_RD
+Class,MunicipalCrew,block,Crew ID specialty equipment availability zone,ELM_AV2_009,PKG_AV2_RD
+Class,FieldCP,block,Command post ID location personnel comms channels status,ELM_AV2_010,PKG_AV2_CC
+Class,DistrictCC,block,Center ID jurisdiction area subordinate units resource pool,ELM_AV2_011,PKG_AV2_CC
+Class,CityEOC,block,EOC ID activation level director staff roster situation board,ELM_AV2_012,PKG_AV2_CC
+Class,RadioChannel,block,Channel ID frequency talkgroup encryption status coverage,ELM_AV2_013,PKG_AV2_COM
+Class,DataLink,block,Link ID type bandwidth latency encryption endpoints,ELM_AV2_014,PKG_AV2_COM
+Class,SatLink,block,Terminal ID satellite constellation bandwidth uptime,ELM_AV2_015,PKG_AV2_COM
+Class,IncidentLog,block,Log ID incident ID timestamp event type source data,ELM_AV2_016,PKG_AV2_PI
+Class,TimelineEntry,block,Entry ID timestamp actor action location evidence ref,ELM_AV2_017,PKG_AV2_PI
+Class,Report,block,Report ID incident ID author date sections findings,ELM_AV2_018,PKG_AV2_PI
+Package,OV1-OperationalNodes,,Operational Nodes,PKG_OV1_NODES,PKG_OV1
+Package,OV1-InformationExchanges,,Information Exchanges,PKG_OV1_EXCH,PKG_OV1
+Node,Field Command Post,node,On-scene tactical coordination node at incident location,ELM_OV1_001,PKG_OV1_NODES
+Node,District Command Center,node,Regional operational coordination and resource management node,ELM_OV1_002,PKG_OV1_NODES
+Node,City Emergency Operations Center,node,Strategic-level command and decision-making node,ELM_OV1_003,PKG_OV1_NODES
+Node,Police Operations Center,node,Police-specific tactical dispatch and coordination node,ELM_OV1_004,PKG_OV1_NODES
+Node,Fire Operations Center,node,Fire and rescue service coordination node,ELM_OV1_005,PKG_OV1_NODES
+Node,EMS Coordination Center,node,Emergency medical services dispatch and coordination node,ELM_OV1_006,PKG_OV1_NODES
+Node,Public Reporting Gateway,node,Citizen incident reporting and alert reception node,ELM_OV1_007,PKG_OV1_NODES
+Node,Sensor Data Aggregator,node,IoT and camera data collection and fusion node,ELM_OV1_008,PKG_OV1_NODES
+Node,Media and Public Affairs,node,Public information dissemination and media coordination node,ELM_OV1_009,PKG_OV1_NODES
+Class,Incident Alert Exchange,block,Situation report from sensors to City EOC,ELM_OV1_010,PKG_OV1_EXCH
+Class,Resource Request Exchange,block,Resource request from Field CP to District CC,ELM_OV1_011,PKG_OV1_EXCH
+Class,Dispatch Order Exchange,block,Tasking order from District CC to response units,ELM_OV1_012,PKG_OV1_EXCH
+Class,Status Update Exchange,block,Progress report from Field CP to City EOC,ELM_OV1_013,PKG_OV1_EXCH
+Class,Situation Brief Exchange,block,Strategic situation summary from EOC to Public Affairs,ELM_OV1_014,PKG_OV1_EXCH
+Class,Citizen Report Exchange,block,Incident report from public to Reporting Gateway,ELM_OV1_015,PKG_OV1_EXCH
+Package,OV2-ResourceFlows,,Resource Flow Needlines,PKG_OV2_FLOWS,PKG_OV2
+Class,Needline-Sensor-to-EOC,block,Real-time sensor data flow from Sensor Aggregator to City EOC,ELM_OV2_001,PKG_OV2_FLOWS
+Class,Needline-Citizen-to-Gateway,block,Public incident reports from Reporting Gateway to District CC,ELM_OV2_002,PKG_OV2_FLOWS
+Class,Needline-District-to-Field,block,Resource dispatch orders from District CC to Field CP,ELM_OV2_003,PKG_OV2_FLOWS
+Class,Needline-Field-to-District,block,Situation reports from Field CP to District CC,ELM_OV2_004,PKG_OV2_FLOWS
+Class,Needline-Police-Dispatch,block,Police unit tasking from Police Ops to Field CP,ELM_OV2_005,PKG_OV2_FLOWS
+Class,Needline-Fire-Dispatch,block,Fire resource tasking from Fire Ops to Field CP,ELM_OV2_006,PKG_OV2_FLOWS
+Class,Needline-EMS-Dispatch,block,Ambulance and medical resource tasking to Field CP,ELM_OV2_007,PKG_OV2_FLOWS
+Class,Needline-Municipal-Dispatch,block,Public works and utility crews tasking to Field CP,ELM_OV2_008,PKG_OV2_FLOWS
+Class,Needline-District-to-EOC,block,Aggregated situation reports from District CC to City EOC,ELM_OV2_009,PKG_OV2_FLOWS
+Class,Needline-EOC-to-Media,block,Public information releases from City EOC to Media,ELM_OV2_010,PKG_OV2_FLOWS
+Class,Needline-PostIncident-Data,block,Post-incident data from Field CP to Analysis Module,ELM_OV2_011,PKG_OV2_FLOWS
+Package,OV4-Organizations,,Organizational Structure,PKG_OV4_ORG,PKG_OV4
+Class,Smart City Emergency Management Agency,actor,Top-level emergency management authority,ELM_OV4_001,PKG_OV4_ORG
+Class,City EOC Director,actor,Strategic commander of emergency operations,ELM_OV4_002,PKG_OV4_ORG
+Class,Operations Section,actor,EOC operations branch coordinating tactical response,ELM_OV4_003,PKG_OV4_ORG
+Class,Planning Section,actor,EOC planning branch for resource and intelligence,ELM_OV4_004,PKG_OV4_ORG
+Class,Logistics Section,actor,EOC logistics branch for supply and support,ELM_OV4_005,PKG_OV4_ORG
+Class,District Command Center Commander,actor,Regional-level operational commander,ELM_OV4_006,PKG_OV4_ORG
+Class,District Operations Officer,actor,District-level tactical operations coordinator,ELM_OV4_007,PKG_OV4_ORG
+Class,District Communication Officer,actor,District-level comms and IT liaison,ELM_OV4_008,PKG_OV4_ORG
+Class,Field Incident Commander,actor,On-scene tactical commander,ELM_OV4_009,PKG_OV4_ORG
+Class,Police Liaison Officer,actor,Police representative at Field CP,ELM_OV4_010,PKG_OV4_ORG
+Class,Fire Liaison Officer,actor,Fire service representative at Field CP,ELM_OV4_011,PKG_OV4_ORG
+Class,EMS Liaison Officer,actor,Medical services representative at Field CP,ELM_OV4_012,PKG_OV4_ORG
+Class,Public Information Officer,actor,Media and public communications officer,ELM_OV4_013,PKG_OV4_ORG
+Package,OV5-Activities,,Operational Activities,PKG_OV5_ACT,PKG_OV5
+Activity,Detect Incident,activity,Receive and validate sensor alerts and citizen reports,ELM_OV5_001,PKG_OV5_ACT
+Activity,Classify Incident,activity,Categorize incident type and assess initial severity,ELM_OV5_002,PKG_OV5_ACT
+Activity,Prioritize Response,activity,Assign priority level based on threat and resource availability,ELM_OV5_003,PKG_OV5_ACT
+Activity,Activate Command Structure,activity,Activate tiered command hierarchy based on incident scale,ELM_OV5_004,PKG_OV5_ACT
+Activity,Deploy Field Command Post,activity,Establish on-scene tactical coordination capability,ELM_OV5_005,PKG_OV5_ACT
+Activity,Dispatch Police Resources,activity,Allocate police units to incident scene and perimeter,ELM_OV5_006,PKG_OV5_ACT
+Activity,Dispatch Fire Resources,activity,Allocate fire trucks and equipment to incident scene,ELM_OV5_007,PKG_OV5_ACT
+Activity,Dispatch EMS Resources,activity,Allocate ambulances and medical teams to incident scene,ELM_OV5_008,PKG_OV5_ACT
+Activity,Dispatch Municipal Resources,activity,Allocate public works crews for infrastructure support,ELM_OV5_009,PKG_OV5_ACT
+Activity,Coordinate Inter-Agency,activity,Synchronize multi-agency response actions and resources,ELM_OV5_010,PKG_OV5_ACT
+Activity,Monitor Situation,activity,Continuous situation assessment and threat evolution tracking,ELM_OV5_011,PKG_OV5_ACT
+Activity,Communicate to Public,activity,Issue public alerts warnings and safety information,ELM_OV5_012,PKG_OV5_ACT
+Activity,Adjust Response Plan,activity,Adapt response strategy based on evolving situation,ELM_OV5_013,PKG_OV5_ACT
+Activity,Demobilize Resources,activity,Stand down and release resources as situation stabilizes,ELM_OV5_014,PKG_OV5_ACT
+Activity,Collect Incident Data,activity,Gather all logs records and evidence for post-incident analysis,ELM_OV5_015,PKG_OV5_ACT
+Activity,Analyze Response Performance,activity,Evaluate response effectiveness and identify lessons learned,ELM_OV5_016,PKG_OV5_ACT
+Activity,Generate After-Action Report,activity,Compile incident timeline findings and recommendations,ELM_OV5_017,PKG_OV5_ACT
+Package,SV1-SystemComponents,,System Components,PKG_SV1_COMP,PKG_SV1
+Package,SV1-Interfaces,,System Interfaces,PKG_SV1_IF,PKG_SV1
+Component,Sensor Management Platform,block,IoT sensor data ingestion normalization and fusion system,ELM_SV1_001,PKG_SV1_COMP
+Component,Video Analytics Engine,block,AI-powered CCTV video stream analysis and anomaly detection,ELM_SV1_002,PKG_SV1_COMP
+Component,Public Reporting Portal,block,Web and mobile citizen incident reporting interface,ELM_SV1_003,PKG_SV1_COMP
+Component,Incident Management System,block,Core incident lifecycle management and tracking platform,ELM_SV1_004,PKG_SV1_COMP
+Component,Resource Management System,block,Multi-agency resource inventory tracking and allocation engine,ELM_SV1_005,PKG_SV1_COMP
+Component,Computer-Aided Dispatch,block,Automated dispatch recommendation and routing system,ELM_SV1_006,PKG_SV1_COMP
+Component,Command and Control Platform,block,Integrated C2 dashboard with common operational picture,ELM_SV1_007,PKG_SV1_COMP
+Component,Geographic Information System,block,Spatial data management and map visualization service,ELM_SV1_008,PKG_SV1_COMP
+Component,TETRA Communication Gateway,block,Voice communication bridge to TETRA radio infrastructure,ELM_SV1_009,PKG_SV1_COMP
+Component,LTE Data Gateway,block,Broadband data communication gateway for mobile units,ELM_SV1_010,PKG_SV1_COMP
+Component,Satellite Communication Module,block,Backup satellite link management and failover controller,ELM_SV1_011,PKG_SV1_COMP
+Component,Message Bus,block,Enterprise service bus for inter-system message routing,ELM_SV1_012,PKG_SV1_COMP
+Component,Identity and Access Management,block,Authentication authorization and role-based access control,ELM_SV1_013,PKG_SV1_COMP
+Component,Post-Incident Analysis Engine,block,Data aggregation timeline reconstruction and report generation,ELM_SV1_014,PKG_SV1_COMP
+Class,IF-Sensor-to-Analytics,block,Data interface between Sensor Platform and Video Analytics,ELM_SV1_015,PKG_SV1_IF
+Class,IF-Reporting-to-IMS,block,Data interface between Public Reporting Portal and Incident Management,ELM_SV1_016,PKG_SV1_IF
+Class,IF-IMS-to-CAD,block,Command interface between Incident Management and Computer-Aided Dispatch,ELM_SV1_017,PKG_SV1_IF
+Class,IF-CAD-to-RMS,block,Data interface between Dispatch and Resource Management System,ELM_SV1_018,PKG_SV1_IF
+Class,IF-IMS-to-C2,block,Situation data feed from Incident Management to C2 Platform,ELM_SV1_019,PKG_SV1_IF
+Class,IF-C2-to-GIS,block,Map data and spatial query interface between C2 and GIS,ELM_SV1_020,PKG_SV1_IF
+Class,IF-C2-to-TETRA,block,Voice command interface from C2 Platform to TETRA Gateway,ELM_SV1_021,PKG_SV1_IF
+Class,IF-C2-to-LTE,block,Data and video interface from C2 Platform to LTE Gateway,ELM_SV1_022,PKG_SV1_IF
+Class,IF-MessageBus,block,Central message routing interface connecting all subsystems,ELM_SV1_023,PKG_SV1_IF
+Class,IF-IAM-to-All,block,Authentication and authorization interface for all system components,ELM_SV1_024,PKG_SV1_IF
+Class,IF-IMS-to-PostAnalysis,block,Incident data export interface to Post-Incident Analysis Engine,ELM_SV1_025,PKG_SV1_IF
+Package,SV4-SystemFunctions,,System Functions,PKG_SV4_FUNC,PKG_SV4
+Package,SV4-DataFlows,,System Data Flows,PKG_SV4_DAT,PKG_SV4
+Activity,Collect Sensor Data,activity,Ingest and normalize data from heterogeneous IoT sensors,ELM_SV4_001,PKG_SV4_FUNC
+Activity,Process Video Streams,activity,Real-time video decoding AI inference and anomaly flagging,ELM_SV4_002,PKG_SV4_FUNC
+Activity,Receive Citizen Reports,activity,Validate and ingest incident reports from public channels,ELM_SV4_003,PKG_SV4_FUNC
+Activity,Fuse Multi-Source Data,activity,Correlate sensor video and report data into unified incident picture,ELM_SV4_004,PKG_SV4_FUNC
+Activity,Classify Incident Type,activity,Apply ML model to categorize incident based on fused data,ELM_SV4_005,PKG_SV4_FUNC
+Activity,Calculate Priority Score,activity,Compute urgency and severity score using rule engine,ELM_SV4_006,PKG_SV4_FUNC
+Activity,Match Resources to Incident,activity,Query available resources and recommend optimal allocation,ELM_SV4_007,PKG_SV4_FUNC
+Activity,Generate Dispatch Orders,activity,Create and route tasking orders to agency-specific systems,ELM_SV4_008,PKG_SV4_FUNC
+Activity,Update Common Operational Picture,activity,Aggregate all field reports into real-time situation map,ELM_SV4_009,PKG_SV4_FUNC
+Activity,Route Voice Communications,activity,Manage talkgroup assignments and cross-agency radio patching,ELM_SV4_010,PKG_SV4_FUNC
+Activity,Transmit Video and Data,activity,Stream real-time video and data to command nodes,ELM_SV4_011,PKG_SV4_FUNC
+Activity,Manage User Access,activity,Authenticate users and enforce role-based permissions,ELM_SV4_012,PKG_SV4_FUNC
+Activity,Log All Transactions,activity,Record all system events for audit and post-incident analysis,ELM_SV4_013,PKG_SV4_FUNC
+Activity,Reconstruct Timeline,activity,Automatically assemble chronological incident narrative from logs,ELM_SV4_014,PKG_SV4_FUNC
+Activity,Generate After-Action Report,activity,Compile structured report with findings metrics and recommendations,ELM_SV4_015,PKG_SV4_FUNC
+Class,DF-SensorRaw-to-Fusion,block,Raw sensor telemetry data to data fusion function,ELM_SV4_016,PKG_SV4_DAT
+Class,DF-VideoAlert-to-Fusion,block,AI-detected video anomaly alerts to data fusion function,ELM_SV4_017,PKG_SV4_DAT
+Class,DF-CitizenReport-to-Fusion,block,Validated citizen reports to data fusion function,ELM_SV4_018,PKG_SV4_DAT
+Class,DF-FusedData-to-Classification,block,Unified incident picture to classification function,ELM_SV4_019,PKG_SV4_DAT
+Class,DF-Classification-to-Priority,block,Incident type and metadata to priority scoring function,ELM_SV4_020,PKG_SV4_DAT
+Class,DF-Priority-to-Matching,block,Prioritized incident to resource matching function,ELM_SV4_021,PKG_SV4_DAT
+Class,DF-Matching-to-Dispatch,block,Resource allocation plan to dispatch order generation,ELM_SV4_022,PKG_SV4_DAT
+Class,DF-Dispatch-to-COP,block,Unit status and location updates to COP function,ELM_SV4_023,PKG_SV4_DAT
+Class,DF-COP-to-Voice,block,Situation awareness data to voice communication routing,ELM_SV4_024,PKG_SV4_DAT
+Class,DF-COP-to-Video,block,Video stream routing configuration to data transmission,ELM_SV4_025,PKG_SV4_DAT
+Class,DF-All-to-Logging,block,All system transactions to audit logging function,ELM_SV4_026,PKG_SV4_DAT
+Class,DF-Log-to-Timeline,block,Audit log data to timeline reconstruction function,ELM_SV4_027,PKG_SV4_DAT
+Class,DF-Timeline-to-Report,block,Reconstructed timeline to report generation function,ELM_SV4_028,PKG_SV4_DAT
